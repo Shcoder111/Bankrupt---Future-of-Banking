@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bankrupt - Future of Banking</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Bankrupt.css">
+</head>
+
+<body>
+
+    <div class="bg-glow glow1"></div>
+    <div class="bg-glow glow2"></div>
+
+    <div class="container">
+
+        <!-- LOGIN -->
+
+        <div id="loginSection" class="card">
+
+            <div class="bank-logo">
+                🏦
+            </div>
+
+            <h1>BANKRUPT</h1>
+
+            <p class="subtitle">
+                FUTURE OF BANKING
+            </p>
+
+            <input type="text" id="username" placeholder="Username" autocomplete="off">
+
+            <input type="password" id="password" placeholder="Password" autocomplete="new-password">
+
+            <button onclick="login()">
+                ACCESS THE ACCOUNT
+            </button>
+
+            <p id="loginMessage"></p>
+
+        </div>
+
+        <!-- DASHBOARD -->
+
+        <div id="dashboard" class="card hidden">
+
+            <div class="topbar">
+
+                <h2>
+                    Welcome,
+                    <span id="userNameDisplay"></span>
+                </h2>
+
+                <button class="logout-btn" onclick="logout()">
+                    Logout
+                </button>
+
+            </div>
+
+            <div class="cyber-card">
+
+                <div class="chip"></div>
+
+                <p class="card-label">
+                    YOUR DIGITAL BALANCE
+                </p>
+
+                <h1>
+                    ₹<span id="balance">0</span>
+                </h1>
+
+                <div class="card-number">
+                    1937 2938 2049 2048
+                </div>
+
+            </div>
+
+            <div class="actions">
+
+                <input type="number" id="amount" placeholder="Enter Amount">
+
+                <button class="deposit-btn" onclick="deposit()">
+                    Deposit
+                </button>
+
+                <button class="withdraw-btn" onclick="showReasonBox()">
+                    Withdraw
+                </button>
+
+                <!-- Withdrawal Reason Box -->
+
+                <div id="reasonBox" class="hidden">
+
+                    <input type="text" id="withdrawReason" placeholder="Reason for withdrawal">
+
+                    <button class="withdraw-btn" onclick="confirmWithdraw()">
+                        Confirm Withdrawal
+                    </button>
+
+                </div>
+
+            </div>
+
+            <h3>
+                Transaction Log
+            </h3>
+
+            <ul id="transactionList"></ul>
+
+        </div>
+
+    </div>
+
+    <script src="Bankrupt.js"></script>
+
+</body>
+
+</html>
